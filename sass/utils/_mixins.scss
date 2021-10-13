@@ -1,0 +1,21 @@
+
+@mixin hover{
+  background-color: map-get($color, primaire);
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+  opacity: 0.4;
+  font-size: 1rem;
+}
+
+@mixin boxshadow {
+box-shadow: 2px 5px 10px 3px #dbd7d7;
+}
+
+
+@mixin hover-presentation {
+      background: linear-gradient(135deg, #ff79da, #9356dc);
+      transform: scale(1.1);
+      transition: ease-in-out 0.4s;
+      box-shadow: 2px 5px 10px 3px #9c9898;
+      font-size: 1.1rem;
+    }

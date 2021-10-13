@@ -1,0 +1,34 @@
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #353535;
+  color: #fff;
+  .logo_footer {
+    width: 50%;
+    color: #fff;
+    padding: 25px;
+    filter: invert(100%);
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    &__link {
+      color: #fff;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+  }
+}
+.fa-utensils {
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+.fa-hands-helping {
+  font-size: 0.9rem;
+  width: 12px;
+  margin-right: 10px;
+}

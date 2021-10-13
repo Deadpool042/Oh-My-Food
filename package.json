@@ -1,0 +1,14 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Project-3 OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "Laurent Puleri",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0"
+  }
+}

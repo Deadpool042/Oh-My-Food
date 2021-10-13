@@ -1,0 +1,46 @@
+.localisation {
+  width: 100%;
+  margin: auto;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #eaeaea;
+  font-weight: bold;
+}
+
+.presentation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  &__titre {
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__annonce {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .btn {
+    padding: 15px 20px;
+    margin: 30px 0 50px 0;
+    border: none;
+    
+    @include boxshadow;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: map-get($color, secondaire);
+    cursor: pointer;
+    transform: scale(1);
+    &:hover {
+      @include hover-presentation;
+    }
+  }
+}

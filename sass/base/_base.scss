@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  padding: 0;
+  max-width: 375px;
+  outline: 1px solid black;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  .logo,
+  h1,
+  h2,
+  h3 {
+    font-family: "Shrikland", sans-serif;
+  }
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
