@@ -33,6 +33,18 @@
   }
 }
 
+.validation{  /*-- btn pages menu -- */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+   .btn--main{
+     &:hover{
+       @include hover-main;
+     }
+     @include boxshadow;
+   }
+}  
+
 
               
     

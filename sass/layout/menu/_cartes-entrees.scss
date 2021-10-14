@@ -1,0 +1,47 @@
+.cartes-entree, .cartes-plats, .cartes-desserts{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  &__btn{
+      cursor: pointer;
+
+
+        background-color: #ffff;
+        border-radius: 15px;
+        @include boxshadow;
+
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "titre prix"
+        "description prix";
+      }
+      &--titre{
+        grid-area: titre;
+        font-size: 1.2rem;
+
+        margin-top: 7px;
+
+        margin-left: 10px;
+        margin-bottom: 0;
+      }
+      &--description{
+        grid-area: description;
+        margin-left: 10px;
+        margin-top: 10px;
+       
+      }
+      &--prix{
+        grid-area: prix;
+        align-self: flex-end;
+
+
+        font-size: 1.2rem;
+        font-weight: bold;
+        
+        
+        margin-top: 5px;
+       }
+}  

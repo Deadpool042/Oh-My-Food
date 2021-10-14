@@ -76,6 +76,23 @@ main h3 {
   box-shadow: 2px 5px 10px 3px #9c9898;
 }
 
+.validation {
+  /*-- btn pages menu -- */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.validation .btn--main {
+  box-shadow: 2px 5px 10px 3px #dbd7d7;
+}
+.validation .btn--main:hover {
+  background: linear-gradient(135deg, #ff79da, #9356dc);
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+  box-shadow: 2px 5px 10px 3px #9c9898;
+  font-size: 1.1rem;
+}
+
 .localisation {
   width: 100%;
   margin: auto;
@@ -115,6 +132,67 @@ main h3 {
   transition: ease-in-out 0.4s;
   box-shadow: 2px 5px 10px 3px #9c9898;
   font-size: 1.1rem;
+}
+
+.presentation .image-restaurant {
+  width: 375px;
+  height: 260px;
+  background-size: 100% 100%;
+}
+
+.presentation img {
+  width: 100%;
+  height: 260px;
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+
+.selection-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-color: #f6f6f6;
+}
+
+.selection-entrees, .selection-plats, .selection-desserts {
+  width: 95%;
+  margin: auto;
+}
+
+.cartes-entree, .cartes-plats, .cartes-desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cartes-entree__btn, .cartes-plats__btn, .cartes-desserts__btn {
+  cursor: pointer;
+  background-color: #ffff;
+  border-radius: 15px;
+  box-shadow: 2px 5px 10px 3px #dbd7d7;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "titre prix" "description prix";
+}
+.cartes-entree--titre, .cartes-plats--titre, .cartes-desserts--titre {
+  grid-area: titre;
+  font-size: 1.2rem;
+  margin-top: 7px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+.cartes-entree--description, .cartes-plats--description, .cartes-desserts--description {
+  grid-area: description;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.cartes-entree--prix, .cartes-plats--prix, .cartes-desserts--prix {
+  grid-area: prix;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .fonctionnement {
@@ -248,67 +326,6 @@ footer .footer__link {
   font-size: 0.9rem;
   width: 12px;
   margin-right: 10px;
-}
-
-.presentation .image-restaurant {
-  width: 375px;
-  height: 260px;
-  background-size: 100% 100%;
-}
-
-.presentation img {
-  width: 100%;
-  height: 260px;
-  background-size: 100% 100%;
-  object-fit: cover;
-}
-
-.selection-menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-  background-color: #f6f6f6;
-}
-
-.selection-entrees, .selection-plats, .selection-desserts {
-  width: 95%;
-  margin: auto;
-}
-
-.cartes-entree, .cartes-plats, .cartes-desserts {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.cartes-entree__btn, .cartes-plats__btn, .cartes-desserts__btn {
-  cursor: pointer;
-  background-color: #ffff;
-  border-radius: 15px;
-  box-shadow: 2px 5px 10px 3px #dbd7d7;
-  display: grid;
-  grid-template-columns: 1fr 50px;
-  grid-template-rows: 1fr;
-  grid-template-areas: "titre prix" "description prix";
-}
-.cartes-entree--titre, .cartes-plats--titre, .cartes-desserts--titre {
-  grid-area: titre;
-  font-size: 1.2rem;
-  margin-top: 7px;
-  margin-left: 10px;
-  margin-bottom: 0;
-}
-.cartes-entree--description, .cartes-plats--description, .cartes-desserts--description {
-  grid-area: description;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-.cartes-entree--prix, .cartes-plats--prix, .cartes-desserts--prix {
-  grid-area: prix;
-  align-self: flex-end;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 5px;
 }
 
 .validation {

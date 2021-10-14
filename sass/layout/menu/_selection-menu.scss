@@ -1,0 +1,14 @@
+.selection-menu{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-color: #f6f6f6;
+}      
+      
+.selection-entrees, .selection-plats, .selection-desserts{
+  width: 95%;
+  
+  margin: auto;
+  }
+
