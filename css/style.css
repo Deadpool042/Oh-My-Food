@@ -328,20 +328,4 @@ footer .footer__link {
   margin-right: 10px;
 }
 
-.validation {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.validation .btn--main {
-  box-shadow: 2px 5px 10px 3px #dbd7d7;
-}
-.validation .btn--main:hover {
-  background: linear-gradient(135deg, #ff79da, #9356dc);
-  transform: scale(1.1);
-  transition: ease-in-out 0.4s;
-  box-shadow: 2px 5px 10px 3px #9c9898;
-  font-size: 1.1rem;
-}
-
 /*# sourceMappingURL=style.css.map */
