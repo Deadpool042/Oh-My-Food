@@ -28,22 +28,4 @@
   }
 }
 
-.btn_choix {
-  display: flex;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 30px;
-  margin-right: 20px;
-  border: none;
-  border-radius: 25px;
-   @include boxshadow;
-  width: 90%;
-  font-size: 0.9rem;
-  font-weight: bold;
-  gap: 30px;
-  cursor: pointer;
-  &:hover {
-    @include hover;
-    box-shadow: 2px 5px 10px 3px #9c9898;
-  }
-}
+

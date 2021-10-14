@@ -12,7 +12,7 @@ box-shadow: 2px 5px 10px 3px #dbd7d7;
 }
 
 
-@mixin hover-presentation {
+@mixin hover-main {
       background: linear-gradient(135deg, #ff79da, #9356dc);
       transform: scale(1.1);
       transition: ease-in-out 0.4s;

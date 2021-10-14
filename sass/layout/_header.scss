@@ -2,9 +2,15 @@ header {
   width: 100%;
   margin: auto;
   padding: 20px;
+  display: flex;
+  align-items: center;
   .logo {
     width: 60%;
     margin: auto;
-    display: flex;
   }
+  .fa-arrow-left{
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
 }

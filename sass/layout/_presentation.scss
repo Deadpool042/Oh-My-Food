@@ -27,20 +27,10 @@
     margin: auto;
     text-align: center;
   }
-  .btn {
-    padding: 15px 20px;
-    margin: 30px 0 50px 0;
-    border: none;
-    
-    @include boxshadow;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: map-get($color, secondaire);
-    cursor: pointer;
-    transform: scale(1);
-    &:hover {
-      @include hover-presentation;
+  .btn--main {
+    &:hover{
+      @include hover-main;
     }
+    @include boxshadow;
   }
 }
