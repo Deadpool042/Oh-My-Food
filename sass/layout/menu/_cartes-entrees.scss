@@ -1,4 +1,4 @@
-.cartes-entree,
+.cartes,
 .cartes-plats,
 .cartes-desserts {
   display: flex;
@@ -6,44 +6,66 @@
   gap: 20px;
 
   &__btn {
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
+    overflow: hidden;
+
+    position: relative;
 
     background-color: #ffff;
     border-radius: 15px;
+    height: 70px;
+
     @include boxshadow;
+    &:hover .cartes__prix {
+      animation: slide-left70px 0.6s ease-in both;
+    }
+    &:hover .validation__box {
+      animation: slide-left70px 0.6s ease-in-out both;
+    }
+    &:hover .fa-check-circle {
+      animation: rotate-360 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
 
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      "titre prix"
-      "description prix";
+    &--titre {
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+    &--sous-titre {
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
   }
-  &--titre {
-    grid-area: titre;
-    font-size: 1.2rem;
-    margin-top: 7px;
-    margin-left: 10px;
-    margin-bottom: 0;
-  }
-  &--description {
-    grid-area: description;
-    margin-left: 10px;
-  }
-  &--prix {
-    grid-area: prix;
-    align-self: flex-end;
-
-    font-size: 1.2rem;
+  &__prix {
+    margin-right: 25px;
+    margin-bottom: 10px;
     font-weight: bold;
-
-    margin-top: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
- .validation__box{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .validation__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -71px;
+    height: 100%;
+    padding: 0 25px;
+    border-radius: 0 15px 15px 0;
+    color: #ffff;
+    background-color: $color-tertiary;
+    .fa-check-circle {
+      font-size: 1.3rem;
+    }
+  }
 }
-}
-
-

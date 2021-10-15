@@ -1,0 +1,36 @@
+/*--- rotation animée 360° */
+
+.rotate-90-cw {
+	animation: rotate-360 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes rotate-360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* slide-left */
+
+@keyframes slide-left70px {
+  from{
+    transform-origin: right;
+  }
+to{
+  transform: translate(-70px);
+}
+}
+
+@keyframes slide-left15px {
+  from{
+    transform-origin: right;
+  }
+  to{
+    transform: translateX(-15px);
+  }
+}
+
