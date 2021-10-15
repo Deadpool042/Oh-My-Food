@@ -1,14 +1,20 @@
 .presentation{
+  position: relative;
       .image-restaurant{
       width: 375px;
       height: 260px;
-      background-size: 100% 100%;
-    }
-   
+          }
+   &__border{
+        width: 100%;
+        height: 50px;
+        background-color:$background-color;
+       position: absolute;
+       bottom: -15px;
+       border-radius: 40px 40px 0 0 ;
+      }
 }
 .presentation img{ 
         width: 100%;
-        height: 260px;
-        background-size: 100% 100%;
+        height: 100%;
         object-fit: cover;
       }

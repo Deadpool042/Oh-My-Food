@@ -8,15 +8,14 @@
     font-size: 1.1rem;
 
     color: #fff;
-    background-color: map-get($color, secondaire);
-
-    transform: scale(1);
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
+    
 }
 
 .btn_choix {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: $background-color;
   padding: 30px;
   margin-right: 20px;
   border: none;
@@ -39,7 +38,7 @@
   justify-content: center;
    .btn--main{
      &:hover{
-       @include hover-main;
+       @include hover-validation;
      }
      @include boxshadow;
    }

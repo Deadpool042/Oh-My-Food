@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: $background-color;
   &__titre {
     width: 70%;
     text-align: center;
@@ -29,7 +29,7 @@
   }
   .btn--main {
     &:hover{
-      @include hover-main;
+      @include hover-presentation;
     }
     @include boxshadow;
   }

@@ -8,12 +8,22 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="styleshhet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
 
     <!-- Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Oh My Food</title>
   </head>
@@ -21,22 +31,35 @@
     <main>
       <header>
         <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
-        <img class="logo" src="images/logo/ohmyfood.png" alt="logo Oh My Food" />
+        <img
+          class="logo"
+          src="images/logo/ohmyfood.png"
+          alt="logo Oh My Food"
+        />
       </header>
       <!--- Présentation-->
       <div class="presentation">
         <div class="image-restaurant">
-          <img class="image-restaurant--img" src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens - Lous Hansel" />
+          <img
+            class="image-restaurant--img"
+            src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="La palette du goût - Jay Wennington"
+          />
         </div>
+        <div class="presentation__border"></div>
       </div>
 
       <!--- menu-->
       <section class="selection-menu">
-        <h1>La palette du goût</h1>
+        <div class="selection-menu__titre">
+          <h1 class="selection-menu__titre--nom">La palette du goût</h1>
+          <i class="fas fa-heart"></i>
+          <i class="far fa-heart"></i>
+        </div>
 
         <!-- Entrées-->
         <div class="selection-entrees">
-          <h2 class="entrees">Entrées</h2>
+          <h3 class="entrees">Entrées</h3>
 
           <div class="cartes-entree">
             <div class="cartes-entree__btn">
@@ -47,13 +70,17 @@
 
             <div class="cartes-entree__btn">
               <h3 class="cartes-entree--titre">Foie gras de canard mi-cuit</h3>
-              <p class="cartes-entree--description">Et ses copeaux de truffe noire</p>
+              <p class="cartes-entree--description">
+                Et ses copeaux de truffe noire
+              </p>
               <p class="cartes-entree--prix">35€</p>
             </div>
 
             <div class="cartes-entree__btn">
               <h3 class="cartes-entree--titre">Oeuf au plat</h3>
-              <p class="cartes-entree--description">Assaisonné à la truffe sur lit de caviar</p>
+              <p class="cartes-entree--description">
+                Assaisonné à la truffe sur lit de caviar
+              </p>
               <p class="cartes-entree--prix">20€</p>
             </div>
           </div>
@@ -62,18 +89,22 @@
         <!-- Plâts -->
 
         <div class="selection-plats">
-          <h2 class="plats">Plats</h2>
+          <h3 class="plats">Plats</h3>
 
           <div class="cartes-plats">
             <div class="cartes-plats__btn">
               <h3 class="cartes-plats--titre">Filet de boeuf aux herbes</h3>
-              <p class="cartes-plats--description">Accompagné de sa ribambelle de légumes</p>
+              <p class="cartes-plats--description">
+                Accompagné de sa ribambelle de légumes
+              </p>
               <p class="cartes-plats--prix">40€</p>
             </div>
 
             <div class="cartes-plats__btn">
               <h3 class="cartes-plats--titre">Parmentier de queue de boeuf</h3>
-              <p class="cartes-plats--description">À la truffe noire sur sa purée de panais</p>
+              <p class="cartes-plats--description">
+                À la truffe noire sur sa purée de panais
+              </p>
               <p class="cartes-plats--prix">35€</p>
             </div>
 
@@ -87,7 +118,7 @@
         <!-- Désserts -->
 
         <div class="selection-desserts">
-          <h2 class="desserts">Désserts</h2>
+          <h3 class="desserts">Désserts</h3>
 
           <div class="cartes-desserts">
             <div class="cartes-desserts__btn">
@@ -97,14 +128,20 @@
             </div>
 
             <div class="cartes-desserts__btn">
-              <h3 class="cartes-desserts--titre">Macaron au chocolat d'exception</h3>
-              <p class="cartes-desserts--description">Et glace à la vanille de Madagascar</p>
+              <h3 class="cartes-desserts--titre">
+                Macaron au chocolat d'exception
+              </h3>
+              <p class="cartes-desserts--description">
+                Et glace à la vanille de Madagascar
+              </p>
               <p class="cartes-desserts--prix">22€</p>
             </div>
 
             <div class="cartes-desserts__btn">
               <h3 class="cartes-desserts--titre">Mousse au chocolat</h3>
-              <p class="cartes-desserts--description">Au piment d'Espelette et à la truffe noire</p>
+              <p class="cartes-desserts--description">
+                Au piment d'Espelette et à la truffe noire
+              </p>
               <p class="cartes-desserts--prix">23€</p>
             </div>
           </div>
@@ -116,13 +153,21 @@
       </div>
 
       <footer>
-        <img class="logo_footer" src="/images/logo/ohmyfood.png" alt="logo Oh My Food" />
+        <img
+          class="logo_footer"
+          src="/images/logo/ohmyfood.png"
+          alt="logo Oh My Food"
+        />
         <div class="footer">
           <a href="#"
-            ><div class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</div></a
+            ><div class="footer__link">
+              <i class="fas fa-utensils"></i>Proposer un restaurant
+            </div></a
           >
           <a href="#"
-            ><div class="footer__link"><i class="fas fa-hands-helping"></i>Devenir partenaire</div></a
+            ><div class="footer__link">
+              <i class="fas fa-hands-helping"></i>Devenir partenaire
+            </div></a
           >
           <a href="#"><div class="footer__link">Mention légales</div></a>
           <a href="#"><div class="footer__link">Contact</div></a>

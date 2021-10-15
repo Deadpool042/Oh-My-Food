@@ -1,12 +1,11 @@
 header {
   width: 100%;
-  margin: auto;
   padding: 20px;
   display: flex;
-  align-items: center;
+  outline: 1px solid black;
 }
 header .logo {
-  width: 60%;
+  width: 40%;
   margin: auto;
 }
 header .fa-arrow-left {
@@ -15,29 +14,35 @@ header .fa-arrow-left {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-main {
   margin: auto;
   padding: 0;
   max-width: 375px;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shrikhand", cursive;
+}
+
+main {
   outline: 1px solid black;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
 }
 main .logo,
-main h1,
-main h2,
-main h3 {
-  font-family: "Shrikland", sans-serif;
+main h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 * {
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+}
+
+a {
+  color: black;
+}
+a:visited {
+  color: black;
 }
 
 .btn--main {
@@ -48,8 +53,7 @@ main h3 {
   border-radius: 30px;
   font-size: 1.1rem;
   color: #fff;
-  background-color: #ff79da;
-  transform: scale(1);
+  background: linear-gradient(135deg, #ff79da, #9356dc);
 }
 
 .btn_choix {
@@ -68,11 +72,9 @@ main h3 {
   cursor: pointer;
 }
 .btn_choix:hover {
-  background-color: #9356dc;
-  transform: scale(1.05);
-  transition: ease-in-out 0.3s;
-  opacity: 0.4;
   font-size: 1rem;
+  background-color: #f2eafb;
+  box-shadow: 2px 5px 10px 3px #9c9898;
   box-shadow: 2px 5px 10px 3px #9c9898;
 }
 
@@ -86,9 +88,7 @@ main h3 {
   box-shadow: 2px 5px 10px 3px #dbd7d7;
 }
 .validation .btn--main:hover {
-  background: linear-gradient(135deg, #ff79da, #9356dc);
-  transform: scale(1.1);
-  transition: ease-in-out 0.4s;
+  background: #ff88de;
   box-shadow: 2px 5px 10px 3px #9c9898;
   font-size: 1.1rem;
 }
@@ -127,23 +127,30 @@ main h3 {
   box-shadow: 2px 5px 10px 3px #dbd7d7;
 }
 .presentation .btn--main:hover {
-  background: linear-gradient(135deg, #ff79da, #9356dc);
-  transform: scale(1.1);
-  transition: ease-in-out 0.4s;
+  background: #ff88de;
   box-shadow: 2px 5px 10px 3px #9c9898;
   font-size: 1.1rem;
 }
 
+.presentation {
+  position: relative;
+}
 .presentation .image-restaurant {
   width: 375px;
   height: 260px;
-  background-size: 100% 100%;
+}
+.presentation__border {
+  width: 100%;
+  height: 50px;
+  background-color: #f6f6f6;
+  position: absolute;
+  bottom: -15px;
+  border-radius: 40px 40px 0 0;
 }
 
 .presentation img {
   width: 100%;
-  height: 260px;
-  background-size: 100% 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -153,6 +160,51 @@ main h3 {
   width: 100%;
   margin: auto;
   background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  position: relative;
+}
+.selection-menu__titre {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+.selection-menu__titre--nom {
+  width: 85%;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+}
+.selection-menu .far.fa-heart {
+  position: absolute;
+  right: 37px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 0;
+}
+.selection-menu .far.fa-heart:hover {
+  visibility: hidden;
+}
+.selection-menu .fas.fa-heart {
+  color: transparent;
+  font-size: 1.6rem;
+  z-index: 1;
+  right: 23px;
+  bottom: 19px;
+}
+.selection-menu .fas.fa-heart:hover {
+  visibility: visible;
+  color: #ff79da;
+  transform: scale(1.2);
+  transition: ease-in 0.3s;
+}
+.selection-menu .entrees, .selection-menu .plats, .selection-menu .desserts {
+  display: flex;
+  width: 13%;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .selection-entrees, .selection-plats, .selection-desserts {
@@ -160,12 +212,16 @@ main h3 {
   margin: auto;
 }
 
-.cartes-entree, .cartes-plats, .cartes-desserts {
+.cartes-entree,
+.cartes-plats,
+.cartes-desserts {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.cartes-entree__btn, .cartes-plats__btn, .cartes-desserts__btn {
+.cartes-entree__btn,
+.cartes-plats__btn,
+.cartes-desserts__btn {
   cursor: pointer;
   background-color: #ffff;
   border-radius: 15px;
@@ -175,53 +231,70 @@ main h3 {
   grid-template-rows: 1fr;
   grid-template-areas: "titre prix" "description prix";
 }
-.cartes-entree--titre, .cartes-plats--titre, .cartes-desserts--titre {
+.cartes-entree--titre,
+.cartes-plats--titre,
+.cartes-desserts--titre {
   grid-area: titre;
   font-size: 1.2rem;
   margin-top: 7px;
   margin-left: 10px;
   margin-bottom: 0;
 }
-.cartes-entree--description, .cartes-plats--description, .cartes-desserts--description {
+.cartes-entree--description,
+.cartes-plats--description,
+.cartes-desserts--description {
   grid-area: description;
   margin-left: 10px;
-  margin-top: 10px;
 }
-.cartes-entree--prix, .cartes-plats--prix, .cartes-desserts--prix {
+.cartes-entree--prix,
+.cartes-plats--prix,
+.cartes-desserts--prix {
   grid-area: prix;
   align-self: flex-end;
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 5px;
 }
+.cartes-entree .validation__box,
+.cartes-plats .validation__box,
+.cartes-desserts .validation__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .fonctionnement__titre {
   margin-left: 10px;
 }
 
-.choix {
+.nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: -8px;
-  margin-bottom: 50px;
   width: 100%;
+  position: relative;
 }
-.choix__liste {
+.nav__liste {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.choix__liste .circle {
-  padding: 8px 12px 8px 12px;
-  border-radius: 50%;
-  color: #fff;
+.nav__liste--circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #9356dc;
-  position: relative;
-  left: 20px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 0;
+  color: #fff;
 }
 
 .restaurant {
@@ -248,24 +321,33 @@ main h3 {
   flex-direction: column;
   background-color: #fff;
   border-radius: 20px;
+  position: relative;
   box-shadow: 2px 5px 10px 3px #dbd7d7;
+}
+.card__case:hover {
+  transform: scale(1.05);
+  transition: ease-in 0.2s;
+  box-shadow: 2px 8px 24px 1px rgba(147, 86, 220, 0.75);
 }
 .card__case--img {
   width: 336px;
   height: 175px;
+}
+.card__case--img-news {
+  position: absolute;
+  top: 20px;
+  left: 230px;
+  padding: 5px 15px;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  color: #217460;
+  font-weight: bold;
 }
 .card__case--img-src {
   width: 100%;
   height: 100%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
-}
-.card__case:hover {
-  background-color: #9356dc;
-  transform: scale(1.05);
-  transition: ease-in-out 0.3s;
-  opacity: 0.4;
-  font-size: 1rem;
 }
 
 .case__text {
@@ -285,11 +367,30 @@ main h3 {
   margin-left: 10px;
   margin-top: 5px;
 }
-.case__text.fa-heart {
+.case__text.far.fa-heart {
   grid-area: icone;
   justify-self: center;
   margin-top: 30px;
   font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 1;
+}
+.case__text.far.fa-heart:hover {
+  visibility: hidden;
+}
+.case__text.fas.fa-heart {
+  color: transparent;
+  font-size: 1.5rem;
+  z-index: 1;
+  position: absolute;
+  right: 23px;
+  bottom: 19px;
+}
+.case__text.fas.fa-heart:hover {
+  visibility: visible;
+  color: #ff79da;
+  transform: scale(1.2);
+  transition: ease-in 0.3s;
 }
 
 footer {

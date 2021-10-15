@@ -4,6 +4,60 @@
   width: 100%;
   margin: auto;
   background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  position: relative;
+  &__titre{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin:auto;
+    &--nom{
+      width: 85%;
+      letter-spacing: 1.3px;
+      font-weight: 500;
+     
+      }
+    }
+.far.fa-heart {
+  position: absolute;
+    right: 37px;
+    font-size: 1.5rem;
+    font-weight: 500;
+   z-index: 0;
+      &:hover{
+        visibility: hidden;
+      }
+  }
+  .fas.fa-heart{
+    color: transparent;
+    font-size: 1.6rem; 
+    
+    z-index: 1;
+   
+    right: 23px;
+    bottom: 19px;
+      &:hover{
+        visibility: visible;
+        color: $color-secondary;
+        transform: scale(1.2);
+        transition: ease-in 0.3s;
+      }
+  }    
+       
+
+     
+  
+  .entrees, .plats, .desserts{
+    display: flex;
+    width: 13%;
+    border-bottom: 3px solid $color-tertiary;
+    padding-bottom: 5px;
+
+    text-transform: uppercase;
+    font-weight: normal;
+  
+  }
 }      
       
 .selection-entrees, .selection-plats, .selection-desserts{
@@ -11,4 +65,6 @@
   
   margin: auto;
   }
+
+
 
