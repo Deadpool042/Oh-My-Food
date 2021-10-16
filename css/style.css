@@ -21,12 +21,12 @@
     transform: translate(-70px);
   }
 }
-@keyframes slide-left15px {
+@keyframes slide-left52px {
   from {
     transform-origin: right;
   }
   to {
-    transform: translateX(-15px);
+    transform: translateX(-52px);
   }
 }
 header {
@@ -263,27 +263,41 @@ a:visited {
   height: 70px;
   box-shadow: 2px 5px 10px 3px #dbd7d7;
 }
+.cartes__btn:hover,
+.cartes-plats__btn:hover,
+.cartes-desserts__btn:hover {
+  opacity: 0.7;
+}
+.cartes__btn:hover .cartes__description,
+.cartes-plats__btn:hover .cartes__description,
+.cartes-desserts__btn:hover .cartes__description {
+  width: 75%;
+}
 .cartes__btn:hover .cartes__prix,
 .cartes-plats__btn:hover .cartes__prix,
 .cartes-desserts__btn:hover .cartes__prix {
-  animation: slide-left70px 0.6s ease-in both;
+  animation: slide-left52px 0.3s ease-in-out both;
+  padding-right: 50px;
+  padding-left: 80px;
 }
 .cartes__btn:hover .validation__box,
 .cartes-plats__btn:hover .validation__box,
 .cartes-desserts__btn:hover .validation__box {
-  animation: slide-left70px 0.6s ease-in-out both;
+  animation: slide-left70px 0.6s ease both;
 }
 .cartes__btn:hover .fa-check-circle,
 .cartes-plats__btn:hover .fa-check-circle,
 .cartes-desserts__btn:hover .fa-check-circle {
-  animation: rotate-360 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: rotate-360 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .cartes__description,
 .cartes-plats__description,
 .cartes-desserts__description {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .cartes__description--titre,
 .cartes-plats__description--titre,
@@ -291,6 +305,9 @@ a:visited {
   margin: 0;
   padding-top: 10px;
   padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .cartes__description--sous-titre,
 .cartes-plats__description--sous-titre,
@@ -299,16 +316,18 @@ a:visited {
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .cartes__prix,
 .cartes-plats__prix,
 .cartes-desserts__prix {
-  margin-right: 25px;
+  display: flex;
+  align-items: flex-end;
+  width: 50px;
   margin-bottom: 10px;
   font-weight: bold;
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 .cartes .validation__box,
 .cartes-plats .validation__box,
@@ -317,9 +336,9 @@ a:visited {
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: -71px;
+  right: -90px;
   height: 100%;
-  padding: 0 25px;
+  width: 90px;
   border-radius: 0 15px 15px 0;
   color: #ffff;
   background-color: #99e2d0;
@@ -327,7 +346,8 @@ a:visited {
 .cartes .validation__box .fa-check-circle,
 .cartes-plats .validation__box .fa-check-circle,
 .cartes-desserts .validation__box .fa-check-circle {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  margin-right: 20px;
 }
 
 .fonctionnement {

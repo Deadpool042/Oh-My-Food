@@ -10,62 +10,76 @@
     justify-content: space-between;
     cursor: pointer;
     overflow: hidden;
-
     position: relative;
 
     background-color: #ffff;
     border-radius: 15px;
     height: 70px;
-
+    &:hover {
+      opacity: 0.7;
+    }
     @include boxshadow;
+    &:hover .cartes__description {
+      width: 75%;
+    }
+
     &:hover .cartes__prix {
-      animation: slide-left70px 0.6s ease-in both;
+      animation: slide-left52px 0.3s ease-in-out both;
+      padding-right: 50px;
+      padding-left: 80px;
     }
     &:hover .validation__box {
-      animation: slide-left70px 0.6s ease-in-out both;
+      animation: slide-left70px 0.6s ease both;
     }
     &:hover .fa-check-circle {
-      animation: rotate-360 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: rotate-360 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
   &__description {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     white-space: nowrap;
-
+    text-overflow: ellipsis;
     &--titre {
       margin: 0;
       padding-top: 10px;
       padding-left: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     &--sous-titre {
       margin: 0;
       padding-top: 10px;
       padding-left: 10px;
       padding-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
   &__prix {
-    margin-right: 25px;
+    display: flex;
+    align-items: flex-end;
+    width: 50px;
     margin-bottom: 10px;
     font-weight: bold;
-    position: absolute;
-    right: 0;
-    bottom: 0;
   }
   .validation__box {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -71px;
+    right: -90px;
     height: 100%;
-    padding: 0 25px;
+    width: 90px;
     border-radius: 0 15px 15px 0;
     color: #ffff;
     background-color: $color-tertiary;
     .fa-check-circle {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
+      margin-right: 20px;
     }
   }
 }
