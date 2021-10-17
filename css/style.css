@@ -1,7 +1,17 @@
 @charset "UTF-8";
 /*--- rotation animée 360° */
 .rotate-90-cw {
-  animation: rotate-360 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: rotate-360 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: rotate-360 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes rotate-360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate-360 {
@@ -13,12 +23,28 @@
   }
 }
 /* slide-left */
+@-webkit-keyframes slide-left70px {
+  from {
+    transform-origin: right;
+  }
+  to {
+    transform: translate(-70px);
+  }
+}
 @keyframes slide-left70px {
   from {
     transform-origin: right;
   }
   to {
     transform: translate(-70px);
+  }
+}
+@-webkit-keyframes slide-left52px {
+  from {
+    transform-origin: right;
+  }
+  to {
+    transform: translateX(-52px);
   }
 }
 @keyframes slide-left52px {
@@ -30,6 +56,19 @@
   }
 }
 /* spinner */
+@-webkit-keyframes block-spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0.8;
+  }
+}
 @keyframes block-spinner {
   0% {
     visibility: visible;
@@ -41,6 +80,21 @@
   100% {
     visibility: hidden;
     opacity: 0.8;
+  }
+}
+@-webkit-keyframes animation-spinner {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
   }
 }
 @keyframes animation-spinner {
@@ -59,6 +113,24 @@
   }
 }
 /* animation cartes */
+@-webkit-keyframes affichage-progressif {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  70% {
+    opacity: 0.9;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
 @keyframes affichage-progressif {
   0% {
     opacity: 0;
@@ -230,7 +302,8 @@ a:visited {
 .presentation img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .selection-menu {
@@ -325,19 +398,22 @@ a:visited {
 .cartes__btn:hover .cartes__prix,
 .cartes-plats__btn:hover .cartes__prix,
 .cartes-desserts__btn:hover .cartes__prix {
-  animation: slide-left52px 0.3s ease-in-out both;
+  -webkit-animation: slide-left52px 0.3s ease-in-out both;
+          animation: slide-left52px 0.3s ease-in-out both;
   padding-right: 50px;
   padding-left: 80px;
 }
 .cartes__btn:hover .validation__box,
 .cartes-plats__btn:hover .validation__box,
 .cartes-desserts__btn:hover .validation__box {
-  animation: slide-left70px 0.6s ease both;
+  -webkit-animation: slide-left70px 0.6s ease both;
+          animation: slide-left70px 0.6s ease both;
 }
 .cartes__btn:hover .fa-check-circle,
 .cartes-plats__btn:hover .fa-check-circle,
 .cartes-desserts__btn:hover .fa-check-circle {
-  animation: rotate-360 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: rotate-360 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: rotate-360 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .cartes__description,
 .cartes-plats__description,
@@ -400,43 +476,53 @@ a:visited {
 }
 
 #btn1 {
-  animation: affichage-progressif 1s forwards;
+  -webkit-animation: affichage-progressif 1s forwards;
+          animation: affichage-progressif 1s forwards;
 }
 
 #btn2 {
-  animation: affichage-progressif 1s 0.2s forwards;
+  -webkit-animation: affichage-progressif 1s 0.2s forwards;
+          animation: affichage-progressif 1s 0.2s forwards;
 }
 
 #btn3 {
-  animation: affichage-progressif 1s 0.3s forwards;
+  -webkit-animation: affichage-progressif 1s 0.3s forwards;
+          animation: affichage-progressif 1s 0.3s forwards;
 }
 
 #btn4 {
-  animation: affichage-progressif 1s 0.4s forwards;
+  -webkit-animation: affichage-progressif 1s 0.4s forwards;
+          animation: affichage-progressif 1s 0.4s forwards;
 }
 
 #btn5 {
-  animation: affichage-progressif 1s 0.5s forwards;
+  -webkit-animation: affichage-progressif 1s 0.5s forwards;
+          animation: affichage-progressif 1s 0.5s forwards;
 }
 
 #btn6 {
-  animation: affichage-progressif 1s 0.6s forwards;
+  -webkit-animation: affichage-progressif 1s 0.6s forwards;
+          animation: affichage-progressif 1s 0.6s forwards;
 }
 
 #btn7 {
-  animation: affichage-progressif 1s 0.7s forwards;
+  -webkit-animation: affichage-progressif 1s 0.7s forwards;
+          animation: affichage-progressif 1s 0.7s forwards;
 }
 
 #btn8 {
-  animation: affichage-progressif 1s 0.8s forwards;
+  -webkit-animation: affichage-progressif 1s 0.8s forwards;
+          animation: affichage-progressif 1s 0.8s forwards;
 }
 
 #btn9 {
-  animation: affichage-progressif 1s 0.9s forwards;
+  -webkit-animation: affichage-progressif 1s 0.9s forwards;
+          animation: affichage-progressif 1s 0.9s forwards;
 }
 
 #btn10 {
-  animation: affichage-progressif 1s 1s forwards;
+  -webkit-animation: affichage-progressif 1s 1s forwards;
+          animation: affichage-progressif 1s 1s forwards;
 }
 
 .fonctionnement {
@@ -523,7 +609,8 @@ a:visited {
   width: 100%;
   height: 100%;
   border-radius: 20px 20px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .case__text {
@@ -588,11 +675,13 @@ a:visited {
   top: 50%;
   width: 100px;
   height: 100px;
-  animation: animation-spinner 0.1s 25 forwards;
+  -webkit-animation: animation-spinner 0.1s 25 forwards;
+          animation: animation-spinner 0.1s 25 forwards;
 }
 
 .body-index {
-  animation: block-spinner 2.8s;
+  -webkit-animation: block-spinner 2.8s;
+          animation: block-spinner 2.8s;
 }
 
 footer {
@@ -608,7 +697,8 @@ footer .logo_footer {
   width: 50%;
   color: #fff;
   padding: 25px;
-  filter: invert(100%);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 footer .footer {
   display: flex;
@@ -630,5 +720,3 @@ footer .footer__link {
   width: 12px;
   margin-right: 10px;
 }
-
-/*# sourceMappingURL=style.css.map */
