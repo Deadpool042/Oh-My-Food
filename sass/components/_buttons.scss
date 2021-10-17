@@ -1,15 +1,14 @@
 .btn--main {
-    cursor: pointer;
+  cursor: pointer;
 
-    padding: 15px 20px;
-    margin: 30px 0 50px 0;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
+  padding: 15px 20px;
+  margin: 30px 0 50px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
 
-    color: #fff;
-    background: linear-gradient(135deg, $color-secondary, $color-primary);
-    
+  color: #fff;
+  background: linear-gradient(135deg, $color-secondary, $color-primary);
 }
 
 .btn_choix {
@@ -20,7 +19,7 @@
   margin-right: 20px;
   border: none;
   border-radius: 25px;
-   @include boxshadow;
+  @include boxshadow;
   width: 90%;
   font-size: 0.9rem;
   font-weight: bold;
@@ -32,19 +31,16 @@
   }
 }
 
-.validation{  /*-- btn pages menu -- */
+.validation {
+  /*-- btn pages menu -- */
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: $background-color;
-   .btn--main{
-     &:hover{
-       @include hover-validation;
-     }
-     @include boxshadow;
-   }
-}  
-
-
-              
-    
+  .btn--main {
+    &:hover {
+      @include hover-validation;
+    }
+    @include boxshadow;
+  }
+}

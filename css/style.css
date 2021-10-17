@@ -247,7 +247,7 @@ a:visited {
   margin: auto;
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
-  z-index: 1;
+  /*z-index: 1;*/
   position: relative;
 }
 @media all and (min-width: 992px) {
@@ -303,10 +303,12 @@ a:visited {
 .selection-menu .fas.fa-heart:hover {
   visibility: visible;
   color: #ff79da;
-  transform: scale(1.2);
+  transform: scale(1.4);
   transition: ease-in 0.3s;
 }
-.selection-menu .entrees, .selection-menu .plats, .selection-menu .desserts {
+.selection-menu .entrees,
+.selection-menu .plats,
+.selection-menu .desserts {
   display: flex;
   width: 13%;
   border-bottom: 3px solid #99e2d0;
@@ -336,7 +338,6 @@ a:visited {
 .cartes,
 .cartes-plats,
 .cartes-desserts {
-  display: flex;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -659,7 +660,7 @@ a:visited {
 }
 .spinner__animation {
   cursor: progress;
-  z-index: 2;
+  z-index: 99;
   border-bottom: 5px solid #ff79da;
   border-top: 5px solid #9356dc;
   border-radius: 50%;

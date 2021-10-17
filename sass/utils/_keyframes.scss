@@ -1,9 +1,8 @@
 /*--- rotation animée 360° */
 
 .rotate-90-cw {
-	animation: rotate-360 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: rotate-360 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 
 @keyframes rotate-360 {
   0% {
@@ -17,70 +16,71 @@
 /* slide-left */
 
 @keyframes slide-left70px {
-  from{
+  from {
     transform-origin: right;
   }
-to{
-  transform: translate(-70px);
-}
+  to {
+    transform: translate(-70px);
+  }
 }
 
 @keyframes slide-left52px {
-  from{
+  from {
     transform-origin: right;
   }
-  to{
+  to {
     transform: translateX(-52px);
   }
 }
 /* spinner */
-@keyframes block-spinner{
-0%{visibility: visible;
+@keyframes block-spinner {
+  0% {
+    visibility: visible;
     opacity: 0.7;
   }
-70%{opacity:0.7;
-}      
+  70% {
+    opacity: 0.7;
+  }
 
-100%{
-  visibility: hidden;
-  opacity: 0.8;
+  100% {
+    visibility: hidden;
+    opacity: 0.8;
+  }
 }
-}
-
 
 @keyframes animation-spinner {
-  0%{visibility: visible;
+  0% {
+    visibility: visible;
   }
-  50%{transform: rotate(360deg);
-    
+  50% {
+    transform: rotate(360deg);
   }
-  70%{transform: rotate(360deg);
+  70% {
+    transform: rotate(360deg);
   }
-  100%{transform: rotate(360deg);
+  100% {
+    transform: rotate(360deg);
     visibility: hidden;
-    
   }
-  
 }
 
-/* animation cartes */  
+/* animation cartes */
 
 @keyframes affichage-progressif {
-  0%{opacity: 0;
+  0% {
+    opacity: 0;
   }
-  20%{opacity: 0;
+  20% {
+    opacity: 0;
     transform: translateY(20px);
   }
-  70%{opacity: 0.9;
-      transform: translateY(0px);
+  70% {
+    opacity: 0.9;
+    transform: translateY(0px);
   }
-    100%{opacity: 1;
-      visibility: visible;
-    transform: translateY(0px);}
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
 }
-
-
-
-
-
-

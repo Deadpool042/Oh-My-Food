@@ -1,42 +1,34 @@
-  
-@mixin hover{
+@mixin hover {
   font-size: 1rem;
   background-color: lighten($color: $color-primary, $amount: 35%);
   box-shadow: 2px 5px 10px 3px #9c9898;
-  
 }
 
 @mixin boxshadow {
-box-shadow: 2px 5px 10px 3px #dbd7d7;
+  box-shadow: 2px 5px 10px 3px #dbd7d7;
 }
 
+@mixin hover-presentation {
+  background: lighten($color: $color-secondary, $amount: 3%);
+  box-shadow: 2px 5px 10px 3px #9c9898;
+  font-size: 1.1rem;
+}
 
-@mixin hover-presentation{
-      background: lighten($color: $color-secondary, $amount: 3%);
-      box-shadow: 2px 5px 10px 3px #9c9898;
-      font-size: 1.1rem;
-    }
-
-@mixin hover-validation{
-       background: lighten($color: $color-secondary, $amount: 3%);
-      box-shadow: 2px 5px 10px 3px #9c9898;
-      font-size: 1.1rem;
-    }
+@mixin hover-validation {
+  background: lighten($color: $color-secondary, $amount: 3%);
+  box-shadow: 2px 5px 10px 3px #9c9898;
+  font-size: 1.1rem;
+}
 
 @mixin hover-choix_restaurant {
-    transform: scale(1.05);
-    transition: ease-in 0.2s;
+  transform: scale(1.05);
+  transition: ease-in 0.2s;
 }
 
 @mixin boxshadow-cards {
-  box-shadow: 2px 8px 24px 1px rgba(147,86,220,0.75);
-  
+  box-shadow: 2px 8px 24px 1px rgba(147, 86, 220, 0.75);
 }
 
 @mixin boxshadow-spinner {
-  box-shadow: 0 0 95px 10px $color-primary ;
-  
+  box-shadow: 0 0 95px 10px $color-primary;
 }
-
-
-
