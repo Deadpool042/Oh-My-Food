@@ -4,7 +4,7 @@
   "description": "Project-3 OpenClassRooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css -w --style compressed" 
+    "sass": "sass --watch ./sass/main.scss:./css/style.css" 
     
   },
   "author": "Laurent Puleri",
