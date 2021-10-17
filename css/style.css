@@ -29,6 +29,7 @@
     transform: translateX(-52px);
   }
 }
+/* spinner */
 @keyframes block-spinner {
   0% {
     visibility: visible;
@@ -57,11 +58,29 @@
     visibility: hidden;
   }
 }
+/* animation cartes */
+@keyframes affichage-progressif {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  70% {
+    opacity: 0.9;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
 header {
   width: 100%;
   padding: 20px;
   display: flex;
-  outline: 1px solid black;
 }
 header .logo {
   width: 40%;
@@ -79,7 +98,6 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", cursive;
-  outline: 1px solid black;
   display: block;
 }
 
@@ -143,6 +161,7 @@ a:visited {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #f6f6f6;
 }
 .validation .btn--main {
   box-shadow: 2px 5px 10px 3px #dbd7d7;
@@ -286,6 +305,7 @@ a:visited {
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
+  visibility: hidden;
   position: relative;
   background-color: #ffff;
   border-radius: 15px;
@@ -377,6 +397,46 @@ a:visited {
 .cartes-desserts .validation__box .fa-check-circle {
   font-size: 1.6rem;
   margin-right: 20px;
+}
+
+#btn1 {
+  animation: affichage-progressif 1s forwards;
+}
+
+#btn2 {
+  animation: affichage-progressif 1s 0.2s forwards;
+}
+
+#btn3 {
+  animation: affichage-progressif 1s 0.3s forwards;
+}
+
+#btn4 {
+  animation: affichage-progressif 1s 0.4s forwards;
+}
+
+#btn5 {
+  animation: affichage-progressif 1s 0.5s forwards;
+}
+
+#btn6 {
+  animation: affichage-progressif 1s 0.6s forwards;
+}
+
+#btn7 {
+  animation: affichage-progressif 1s 0.7s forwards;
+}
+
+#btn8 {
+  animation: affichage-progressif 1s 0.8s forwards;
+}
+
+#btn9 {
+  animation: affichage-progressif 1s 0.9s forwards;
+}
+
+#btn10 {
+  animation: affichage-progressif 1s 1s forwards;
 }
 
 .fonctionnement {

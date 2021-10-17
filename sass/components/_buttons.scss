@@ -36,6 +36,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: $background-color;
    .btn--main{
      &:hover{
        @include hover-validation;

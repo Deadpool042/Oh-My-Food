@@ -33,7 +33,7 @@ to{
     transform: translateX(-52px);
   }
 }
-
+/* spinner */
 @keyframes block-spinner{
 0%{visibility: visible;
     opacity: 0.7;
@@ -63,7 +63,21 @@ to{
   
 }
 
+/* animation cartes */  
 
+@keyframes affichage-progressif {
+  0%{opacity: 0;
+  }
+  20%{opacity: 0;
+    transform: translateY(20px);
+  }
+  70%{opacity: 0.9;
+      transform: translateY(0px);
+  }
+    100%{opacity: 1;
+      visibility: visible;
+    transform: translateY(0px);}
+}
 
 
 

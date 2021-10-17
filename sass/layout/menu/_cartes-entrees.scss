@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
+ 
   &__btn {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     overflow: hidden;
+    visibility: hidden;
     position: relative;
 
     background-color: #ffff;
@@ -36,6 +37,7 @@
     }
   }
   &__description {
+    
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -82,4 +84,36 @@
       margin-right: 20px;
     }
   }
+}
+#btn1{
+
+animation: affichage-progressif 1s forwards;
+
+}
+#btn2{
+animation: affichage-progressif 1s 0.2s forwards;
+}
+#btn3{
+animation: affichage-progressif 1s 0.3s forwards;
+}
+#btn4{
+animation: affichage-progressif 1s 0.4s forwards;
+}
+#btn5{
+animation: affichage-progressif 1s 0.5s forwards;
+}
+#btn6{
+animation: affichage-progressif 1s 0.6s forwards;
+}
+#btn7{
+animation: affichage-progressif 1s 0.7s forwards ;
+}
+#btn8{
+animation: affichage-progressif 1s 0.8s forwards;
+}
+#btn9{
+animation: affichage-progressif 1s 0.9s  forwards;
+}
+#btn10{
+animation: affichage-progressif 1s 1s  forwards;
 }
