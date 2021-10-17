@@ -1,4 +1,4 @@
-
+  
 @mixin hover{
   font-size: 1rem;
   background-color: lighten($color: $color-primary, $amount: 35%);
@@ -30,6 +30,11 @@ box-shadow: 2px 5px 10px 3px #dbd7d7;
 
 @mixin boxshadow-cards {
   box-shadow: 2px 8px 24px 1px rgba(147,86,220,0.75);
+  
+}
+
+@mixin boxshadow-spinner {
+  box-shadow: 0 0 95px 10px $color-primary ;
   
 }
 

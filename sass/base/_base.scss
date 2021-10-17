@@ -2,13 +2,15 @@ body {
   margin: auto;
   padding: 0;
   max-width: 375px;
-  height: 100vh;
+position: relative;
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", cursive;
+  outline: 1px solid black;
+  display: block;
+  
 }
 
 main {
-  outline: 1px solid black;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
   .logo,
