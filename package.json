@@ -4,11 +4,14 @@
   "description": "Project-3 OpenClassRooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css -w --style compressed" 
+    
   },
   "author": "Laurent Puleri",
   "license": "ISC",
+  "browserlist":"last 4 versions",
   "dependencies": {
     "bootstrap-icons": "^1.5.0"
+    
   }
 }
