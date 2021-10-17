@@ -1,8 +1,12 @@
 .presentation{
   position: relative;
-      .image-restaurant{
+       .image-restaurant{
+       @media all and (min-width: 376px){
+    width: 100%;
+  }
       width: 375px;
       height: 260px;
+      margin: auto;
           }
    &__border{
         width: 100%;

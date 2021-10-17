@@ -1,4 +1,12 @@
 .selection-menu{
+  @media all and (min-width:992px){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    " titre titre titre"
+    "entrees plats desserts";
+  }
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,6 +16,12 @@
   z-index: 1;
   position: relative;
   &__titre{
+    @media all and (min-width:992px){
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    grid-area: titre;
+  }
     display: flex;
     align-items: center;
     width: 95%;
@@ -16,10 +30,13 @@
       width: 85%;
       letter-spacing: 1.3px;
       font-weight: 500;
-     
       }
     }
 .far.fa-heart {
+  @media all and (min-width:992px){
+      position: absolute;
+      right: 430px;  
+     }
   position: absolute;
     right: 37px;
     font-size: 1.5rem;
@@ -60,11 +77,23 @@
   }
 }      
       
-.selection-entrees, .selection-plats, .selection-desserts{
+.selection-entrees {
   width: 95%;
-  
   margin: auto;
+  grid-area: entrees;
+  
   }
+.selection-plats{
+width: 95%;
+  margin: 0 auto;
+  grid-area: plats;
+}
+.selection-desserts{
+  width: 95%;
+  margin: 0 auto;
+  grid-area: desserts;
+}
+
 
 
 

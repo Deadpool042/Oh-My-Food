@@ -1,17 +1,17 @@
 body {
-  margin: auto;
+  margin:  0 auto;
   padding: 0;
-  max-width: 375px;
-position: relative;
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", cursive;
   display: block;
-  
+  max-width: 1200px;
 }
 
 main {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
+  margin: 0 auto;
   .logo,
   h1
   

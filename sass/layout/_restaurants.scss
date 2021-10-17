@@ -10,6 +10,28 @@
   }
 }
 .cards-cases {
+  @media all and (min-width:768px) {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "restaurant1 restaurant2"
+  "restaurant3 restaurant4";
+
+    .card-restaurant1{
+      grid-area: restaurant1;
+    }
+    .card-restaurant2{
+      grid-area: restaurant2;
+    }
+    .card-restaurant3{
+      grid-area: restaurant3;
+    }
+    .card-restaurant4{
+      grid-area: restaurant4;
+    }
+
+} 
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -21,8 +43,8 @@
   flex-direction: column;
   background-color: #fff;
   border-radius: 20px;
+  width: 100%;
   position: relative;
-  
   &:hover{
     @include hover-choix_restaurant;
     @include boxshadow-cards;
@@ -32,6 +54,7 @@
   &--img {
     width: 336px;
     height: 175px;
+    
     
   }
   &--img-news{
@@ -95,8 +118,9 @@
       &:hover{
         visibility: visible;
         color: $color-secondary;
-        transform: scale(1.2);
+        transform: scale(1.3);
         transition: ease-in 0.3s;
+        
       }
   }
 }

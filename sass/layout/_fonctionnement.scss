@@ -1,7 +1,11 @@
 .fonctionnement {
+
+
+
+
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+    margin-left: 20px;
 
   &__titre {
     margin-left: 10px;
@@ -9,12 +13,25 @@
 }
 
 .nav {
+@media all and (min-width:992px){
+  display: flex;
+  flex-direction: row;
+  
+}
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
   width: 100%;
   position: relative;
+  margin-bottom: 20px;
   &__liste {
+    @media all and (min-width:992px){
+      width: 30%;
+      margin: auto;
+      position: relative;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
