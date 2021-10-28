@@ -22,7 +22,7 @@
     <main>
       <header>
         <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
-        <img class="logo" src="./images/logo/ohmyfood.png" alt="logo Oh My Food" />
+        <h1 class="titre">Ohmyfood</h1> 
       </header>
       <!--- Présentation-->
       <div class="presentation">
@@ -36,8 +36,25 @@
       <section class="selection-menu">
         <div class="selection-menu__titre">
          <h1 class="selection-menu__titre--nom">La note enchantée</h1>
-         <i class="fas fa-heart"></i>
-         <i class="far fa-heart"></i>
+        <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="url(#gradientName)"
+                  class="bi bi-heart-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                  />
+                  <defs>
+                    <linearGradient id="gradientName" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#9356dc" />
+                      <stop offset="100%" stop-color="#ff79da" />
+                    </linearGradient>
+                  </defs>
+                </svg>
         </div>
 
         <!-- Entrées-->
@@ -225,7 +242,7 @@
       </div>
 
       <footer>
-        <img class="logo_footer" src="./images/logo/ohmyfood.png" alt="logo Oh My Food" />
+        <h1 class="titre_footer">Ohmyfood</h1>
         <div class="footer">
           <a href="#"
             ><div class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</div></a

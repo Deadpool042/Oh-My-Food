@@ -2,12 +2,14 @@ header {
   width: 100%;
   padding: 20px;
   display: flex;
-  .logo {
-    width: 50%;
+  .titre{
+    display: flex;
+    justify-content: center;
     margin: auto;
+  }
     .fa-arrow-left {
       font-size: 1.4rem;
       cursor: pointer;
     }
   }
-}
+

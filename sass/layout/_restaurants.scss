@@ -92,30 +92,21 @@
     margin-left: 10px;
     margin-top: 5px;
   }
-  &.far.fa-heart {
-    grid-area: icone;
-    justify-self: center;
-    margin-top: 30px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    z-index: 1;
-    &:hover {
-      visibility: hidden;
-    }
-  }
-  &.fas.fa-heart {
-    color: transparent;
-    font-size: 1.5rem;
-
-    z-index: 1;
-    position: absolute;
-    right: 23px;
-    bottom: 19px;
-    &:hover {
-      visibility: visible;
-      color: $color-secondary;
-      transform: scale(1.3);
-      transition: ease-in 0.3s;
-    }
+   .bi-heart-fill{
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  fill: transparent;
+  stroke: black;
+  transition: 0.5s ease-out;
+  &:hover  {
+    fill:url(#gradientName);
+    stroke: none;
+    visibility: visible;
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
   }
 }
+  
+}
+

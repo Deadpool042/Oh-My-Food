@@ -13,7 +13,7 @@
   margin: auto;
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
-  /*z-index: 1;*/
+ 
   position: relative;
   &__titre {
     @media all and (min-width: 992px) {
@@ -31,35 +31,19 @@
       letter-spacing: 1.3px;
       font-weight: 500;
     }
+  
+  .bi-heart-fill{
+  transition: 0.5s ease-out;
+  fill: transparent;
+  stroke: black;
+  &:hover  {
+    fill:url(#gradientName);
+    stroke: none;
+    visibility: visible;
+    transform: scale(1.5);
+    transition: 0.5s ease-in-out;
   }
-  .far.fa-heart {
-    @media all and (min-width: 992px) {
-      position: absolute;
-      right: 430px;
-    }
-    position: absolute;
-    right: 37px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    z-index: 0;
-    &:hover {
-      visibility: hidden;
-    }
-  }
-  .fas.fa-heart {
-    color: transparent;
-    font-size: 1.6rem;
-
-    z-index: 1;
-
-    right: 23px;
-    bottom: 19px;
-    &:hover {
-      visibility: visible;
-      color: $color-secondary;
-      transform: scale(1.4);
-      transition: ease-in 0.3s;
-    }
+}
   }
 
   .entrees,
